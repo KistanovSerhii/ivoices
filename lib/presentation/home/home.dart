@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:storyteller/presentation/home/body.dart';
+import 'package:storyteller/presentation/home/components/body.dart';
 
 class HomePage extends StatelessWidget {
   final String title;
@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: SafeArea(child: homeBody()),
+      body: SafeArea(child: HomeBody()),
     );
   }
 }
