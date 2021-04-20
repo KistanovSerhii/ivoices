@@ -1,17 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:storyteller/presentation/home/body.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
+  final String title;
   HomePage({Key key, this.title}) : super(key: key);
 
-  final String title;
-
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SafeArea(child: homeBody()),
+    );
+  }
 }
 
-class _MyHomePageState extends State<HomePage> {
-  int _counter = 0;
+
+
+/*
+int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -46,4 +53,4 @@ class _MyHomePageState extends State<HomePage> {
       ),
     );
   }
-}
+*/
