@@ -18,20 +18,31 @@ class HomeBody extends StatelessWidget {
 Widget homeAppBarWidget() {
   return Row(
     children: [
-      Spacer(flex: 3,),
+      Spacer(
+        flex: 3,
+      ),
       Center(child: appBarUserExperience()),
-      Spacer(flex: 2,),
-      IconButton(icon: Icon(Icons.settings), color: Colors.white, onPressed: () => {})
+      Spacer(
+        flex: 2,
+      ),
+      IconButton(
+          icon: Icon(Icons.settings), color: Colors.white, onPressed: () => {})
     ],
   );
 }
 
 Widget appBarUserExperience() {
   return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text("100k", style: TextStyle(fontSize: 11.0, color: Colors.white),),
-          Text("Вас услышало", style: TextStyle(fontSize: 8.0, color: Colors.white),),
-        ],
-      );
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text(
+        "100k",
+        style: TextStyle(fontSize: 11.0, color: Colors.white),
+      ),
+      Text(
+        "Вас услышало",
+        style: TextStyle(fontSize: 8.0, color: Colors.white),
+      ),
+    ],
+  );
 }

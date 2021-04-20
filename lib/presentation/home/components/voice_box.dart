@@ -15,42 +15,45 @@ class VoiceBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: press,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.all(kDefaultPaddin),
-              // For  demo we use fixed height  and width
-              // Now we dont need them
-              // height: 180,
-              // width: 160,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: /*Hero(
-                tag: "${voice.countListned}",
-                child: voice.cover,
-              )*/
-              voice.cover,
+        onTap: press,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: kDefaultPaddinLow),
+          child: Container(
+            padding: const EdgeInsets.all(kDefaultPaddinLow),
+            alignment: Alignment.topCenter,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                voice.cover,
+                Container(
+                  child: Column(children: [
+                    Row(
+                      children: [
+                        voice.equalizer,
+                        Text("${voice.timeInfo}"),
+                        voice.statusBtn
+                      ],
+                    ),
+                    Text(
+                      "${voice.title}",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Row(
+                      children: [
+                        Text("Details"),
+                        Text("A${voice.comments}K"),
+                        Text("L${voice.countListned}K")
+                      ],
+                    ),
+                  ]),
+                ),
+              ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-            child: Text(
-              // products is out demo list
-              voice.title,
-              style: TextStyle(color: kTextLightColor),
-            ),
-          ),
-          Text(
-            "\$${voice.comments}",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          )
-        ],
-      ),
-    );
+        ));
   }
 }
