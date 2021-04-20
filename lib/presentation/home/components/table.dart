@@ -15,7 +15,7 @@ Widget table() {
             crossAxisCount: 1,
             mainAxisSpacing: kDefaultPaddin,
             crossAxisSpacing: kDefaultPaddin,
-            childAspectRatio: 0.75,
+            //childAspectRatio: 0.75,
           ),
           itemBuilder: (context, index) =>
               VoiceBox(
@@ -37,7 +37,7 @@ Widget table() {
 List<Voice> getVoices() {
   return [
     new Voice(
-        cover: Image(image: AssetImage('assets/images/cover1.jpg'),),
+        cover: Image(image: AssetImage('assets/images/cover1.jpg'), width: 120, height: 150,),
         equalizer: Image(image: AssetImage('assets/images/equalizer.png')),
         timeInfo: "5m",
         statusBtn: Icon(Icons.access_alarms),
@@ -47,7 +47,7 @@ List<Voice> getVoices() {
     ),
 
     new Voice(
-        cover: Image(image: AssetImage('assets/images/cover2.jpg'),),
+        cover: Image(image: AssetImage('assets/images/cover2.jpg'), width: 120, height: 150,),
         equalizer: Image(image: AssetImage('assets/images/equalizer.png')),
         timeInfo: "7m",
         statusBtn: Icon(Icons.access_alarms),
@@ -57,7 +57,7 @@ List<Voice> getVoices() {
     ),
 
     new Voice(
-        cover: Image(image: AssetImage('assets/images/cover3.jpg'),),
+        cover: Image(image: AssetImage('assets/images/cover3.jpg'), width: 120, height: 150),
         equalizer: Image(image: AssetImage('assets/images/equalizer.png')),
         timeInfo: "2m",
         statusBtn: Icon(Icons.access_alarms),
@@ -67,7 +67,7 @@ List<Voice> getVoices() {
     ),
 
     new Voice(
-        cover: Image(image: AssetImage('assets/images/cover1.jpg'),),
+        cover: Image(image: AssetImage('assets/images/cover1.jpg'), width: 120, height: 150),
         equalizer: Image(image: AssetImage('assets/images/equalizer.png')),
         timeInfo: "5m",
         statusBtn: Icon(Icons.access_alarms),
@@ -76,7 +76,7 @@ List<Voice> getVoices() {
         countListned: "L320"
     ),
     new Voice(
-        cover: Image(image: AssetImage('assets/images/cover3.jpg'),),
+        cover: Image(image: AssetImage('assets/images/cover3.jpg'), width: 120, height: 150),
         equalizer: Image(image: AssetImage('assets/images/equalizer.png')),
         timeInfo: "5m",
         statusBtn: Icon(Icons.access_alarms),
@@ -85,7 +85,7 @@ List<Voice> getVoices() {
         countListned: "L320"
     ),
     new Voice(
-        cover: Image(image: AssetImage('assets/images/cover2.jpg'),),
+        cover: Image(image: AssetImage('assets/images/cover2.jpg'), width: 120, height: 150),
         equalizer: Image(image: AssetImage('assets/images/equalizer.png')),
         timeInfo: "5m",
         statusBtn: Icon(Icons.access_alarms),

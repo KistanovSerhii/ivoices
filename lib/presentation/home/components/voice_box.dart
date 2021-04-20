@@ -30,10 +30,11 @@ class VoiceBox extends StatelessWidget {
                 color: Colors.blue,
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Hero(
+              child: /*Hero(
                 tag: "${voice.countListned}",
                 child: voice.cover,
-              ),
+              )*/
+              voice.cover,
             ),
           ),
           Padding(
