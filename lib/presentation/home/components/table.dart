@@ -8,14 +8,14 @@ Widget table() {
 
   return Expanded(
     child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+        padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddinLow),
         child: GridView.builder(
           itemCount: voices.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 1,
-            mainAxisSpacing: kDefaultPaddin,
-            crossAxisSpacing: kDefaultPaddin,
-            //childAspectRatio: 0.75,
+            mainAxisSpacing: kDefaultPaddinLow,
+            crossAxisSpacing: kDefaultPaddinLow,
+            childAspectRatio: 2,
           ),
           itemBuilder: (context, index) =>
               VoiceBox(

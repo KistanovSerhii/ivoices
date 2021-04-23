@@ -20,12 +20,14 @@ class VoiceBox extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Expanded(
+            child: LimitedBox(
+            maxWidth: 600.0,
             child: Container(
               padding: EdgeInsets.all(kDefaultPaddin),
               // For  demo we use fixed height  and width
               // Now we dont need them
               // height: 180,
-              // width: 160,
+              width: 640,
               decoration: BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.circular(16),
@@ -35,6 +37,7 @@ class VoiceBox extends StatelessWidget {
                 child: voice.cover,
               )*/
               voice.cover,
+            ),
             ),
           ),
           Padding(
