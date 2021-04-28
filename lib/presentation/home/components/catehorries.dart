@@ -7,7 +7,7 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  List<String> categories = ["Новости", "Город", "Избранное"];
+  List<String> categories = ["Новости", "Город", "Избранное", "Черновик"];
   int selectedIndex = 0;
 
   @override
@@ -45,10 +45,10 @@ class _CategoriesState extends State<Categories> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: kDefaultPaddin / 5), //top padding 5
+              margin: EdgeInsets.only(top: kDefaultPaddin / 5),
               height: 2,
               width: 45,
-              color: selectedIndex == index ? Colors.white : Colors.transparent,
+              color: selectedIndex == index ? kTextColor : Colors.transparent,
             )
           ],
         ),
